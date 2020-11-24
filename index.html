@@ -8,8 +8,9 @@
 </head>
 <body>
 <div id="app">
-  <p>現在{{ number }}回クリックされています</p>
-  <button @click="countUp">カウントアップ</button>
+  <p>{{ counter }}</p>
+  <button @click="counter += 1">+1</button>
+  <p>{{ lessThanTree }}</p>
 </div>
 </body>
 </html>
@@ -21,12 +22,11 @@
     new Vue({
         el: '#app',
         data: {
-            number: 0,
-            event: 'click'
+           counter: 1,
         },
-        methods: {
-            countUp: function () {
-                this.number += 1;
+        computed: {
+            lessThanTree: function () {
+                return this.counter > 3 ? '3より上' : '3より下';
             }
         }
     })
