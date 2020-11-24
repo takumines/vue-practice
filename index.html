@@ -28,6 +28,16 @@
             lessThanTree: function () {
                 return this.counter > 3 ? '3より上' : '3より下';
             }
+        },
+        // 非同期処理を行う時に使う
+        // watchの中ではthisは使えない
+        watch: {
+            counter: function () {
+                var vm = this;
+                setTimeout(function () {
+                  vm.counter = 0
+                }, 3000)
+            }
         }
     })
 </script>
