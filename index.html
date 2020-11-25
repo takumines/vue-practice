@@ -9,6 +9,7 @@
 <body>
 <div id="app">
   <p v-if="ok">Hello</p>
+  <p v-else>NO</p>
 </div>
 </body>
 </html>
@@ -20,7 +21,7 @@
     new Vue({
         el: '#app',
         data: {
-            ok: true,
+            ok: false,
         }
     })
 </script>
