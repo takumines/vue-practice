@@ -8,11 +8,9 @@
 </head>
 <body>
 <div id="app">
-  <template v-if="ok">
-    <p>Hello</p>
-    <p>GoodBye</p>
-  </template>
-  <button @click="ok = !ok">ボタン</button>
+  <ul>
+    <li v-for="fruit in fruits">{{ fruit }}</li>
+  </ul>
 </div>
 </body>
 </html>
@@ -24,7 +22,7 @@
     new Vue({
         el: '#app',
         data: {
-            ok: true,
+            fruits: ['りんご', 'ばなな', 'ぶどう']
         }
     })
 </script>
