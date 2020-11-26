@@ -8,8 +8,11 @@
 </head>
 <body>
 <div id="app">
-  <p v-if="ok">Hello</p>
-  <p v-else>NO</p>
+  <template v-if="ok">
+    <p>Hello</p>
+    <p>GoodBye</p>
+  </template>
+  <button @click="ok = !ok">ボタン</button>
 </div>
 </body>
 </html>
@@ -21,7 +24,7 @@
     new Vue({
         el: '#app',
         data: {
-            ok: false,
+            ok: true,
         }
     })
 </script>
