@@ -12,6 +12,7 @@
   <p>{{name}}</p>
   <button @click="message = 'ボタンから変更'">変更</button>
 </div>
+<div id="app2"></div>
 </body>
 </html>
 
@@ -28,6 +29,13 @@
         data: data,
     })
 
-    // elプロパティの変わりができる。動的にマウントさせるIDを変更したいときに使える
     vm.$mount('#app')
+
+    new Vue({
+        el: '#app2',
+        data: {
+            name: '太郎'
+        },
+        template:'<h1>こんにちは{{name}}</h1>'
+    })
 </script>
