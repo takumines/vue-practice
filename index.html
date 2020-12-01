@@ -25,10 +25,9 @@
     }
 
     var vm = new Vue({
-        el: '#app',
         data: data,
     })
 
-    console.log(data === vm.$data)
-    console.log(vm);
+    // elプロパティの変わりができる。動的にマウントさせるIDを変更したいときに使える
+    vm.$mount('#app')
 </script>
