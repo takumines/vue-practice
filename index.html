@@ -19,17 +19,16 @@
 <! ---------------------------------------------------------------------------- >
 
 <script>
-    // Vueインスタンスは最初にインスタンスを作成するときはdataをみてプロパティ事に
-    // Watcherを設定している
+    var data = {
+        message: 'hello',
+        name: '拓巳'
+    }
+
     var vm = new Vue({
         el: '#app',
-        data: {
-            message: 'hello',
-            name: '拓巳'
-        },
+        data: data,
     })
 
-    vm.name = '拓巳'
-
+    console.log(data === vm.$data)
     console.log(vm);
 </script>
