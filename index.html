@@ -12,6 +12,7 @@
 </div>
 <div id="app2">
   <p>{{message}}</p>
+  <button @click="changeMessage1">インスタンス1のmessageを変更</button>
 </div>
 </body>
 </html>
@@ -20,16 +21,22 @@
 <! ---------------------------------------------------------------------------- >
 
 <script>
-    new Vue({
+    var vm1 = new Vue({
         el: '#app',
         data: {
             message: 'hello'
         },
     })
-    new Vue({
+
+    var vm2 = new Vue({
         el: '#app2',
         data: {
           message: 'good bye'
+        },
+        methods: {
+            changeMessage1: function () {
+                vm1.message = 'インスタンス2から変えました'
+            }
         }
     })
 </script>
