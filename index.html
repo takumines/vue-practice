@@ -8,6 +8,8 @@
 </head>
 <body>
 <div id="app">
+  <hello></hello>
+  <hello></hello>
   <p>{{message}}</p>
   <p>{{name}}</p>
   <button @click="message = 'ボタンから変更'">変更</button>
@@ -25,6 +27,10 @@
         message: 'hello',
         name: '拓巳'
     }
+
+   Vue.component('hello', {
+       template: '<p>こんにちは</p>'
+   })
 
     var vm = new Vue({
         el: '#app',
