@@ -1,12 +1,12 @@
 <template>
   <div>
-    <LikeHeader></LikeHeader>
-    <LikeNumber></LikeNumber>
+    <like-header></like-header>
+    <like-number></like-number>
   </div>
 </template>
 
 <script>
-import LikeHeader from './LikeHeader';
+import LikeHeader from './components/LikeHeader';
 
   export default {
     components: {
